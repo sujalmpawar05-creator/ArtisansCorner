@@ -32,7 +32,7 @@ function Checkout() {
       }));
 
       await axios.post(
-        "https://artisans-corner-api.onrender.com/api/orders",
+        "https://artisanscorner.onrender.com/api/orders",
         {
           products,
           shippingAddress: address,
