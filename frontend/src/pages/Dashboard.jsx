@@ -80,7 +80,7 @@ function Dashboard() {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://artisanscorner.onrender.com/api/products"
       );
 
       setProducts(response.data.products);
@@ -145,7 +145,7 @@ function Dashboard() {
       if (editingId) {
 
         await axios.put(
-          `http://localhost:5000/api/products/${editingId}`,
+          `https://artisanscorner.onrender.com/api/products/${editingId}`,
           data,
           {
             headers: {
@@ -161,7 +161,7 @@ function Dashboard() {
       } else {
 
         await axios.post(
-          "http://localhost:5000/api/products",
+          "https://artisanscorner.onrender.com/api/products",
           data,
           {
             headers: {
@@ -203,7 +203,7 @@ function Dashboard() {
         localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`,
+        `https://artisanscorner.onrender.com/api/products/${id}`,
         {
           headers: {
             Authorization: token

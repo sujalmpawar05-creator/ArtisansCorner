@@ -27,7 +27,7 @@ function ProductDetails() {
     try {
 
       const response = await axios.get(
-        `http://localhost:5000/api/products/${id}`
+        `https://artisans-corner-api.onrender.com/api/products/${id}`
       );
 
       setProduct(response.data.product);
@@ -45,7 +45,7 @@ function ProductDetails() {
     try {
 
       const response = await axios.get(
-        `http://localhost:5000/api/reviews/${id}`
+        `https://artisans-corner-api.onrender.com/api/reviews/${id}`
       );
 
       setReviews(response.data.reviews);
@@ -66,7 +66,7 @@ function ProductDetails() {
         localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/api/reviews",
+        "https://artisans-corner-api.onrender.com/api/reviews",
         {
           productId: id,
           rating,

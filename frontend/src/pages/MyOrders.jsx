@@ -19,7 +19,7 @@ function MyOrders() {
         localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/my-orders",
+        "https://artisans-corner-api.onrender.com/api/my-orders",
         {
           headers: {
             Authorization: token
