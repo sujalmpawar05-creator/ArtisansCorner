@@ -32,7 +32,7 @@ function Checkout() {
       }));
 
       await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://artisans-corner-api.onrender.com/api/orders",
         {
           products,
           shippingAddress: address,
