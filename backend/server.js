@@ -12,11 +12,10 @@ const storage = multer.diskStorage({});
 const Review = require("./models/Review");
 
 const upload = multer({ storage });
-const cors = require("cors");
 
 
 const app = express();
-app.use(cors());
+
 
 // Middleware
 app.use(cors());
