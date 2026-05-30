@@ -63,30 +63,83 @@ function Checkout() {
 
   return (
 
-    <div style={{ padding: "20px" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#030b22"
+      }}
+    >
 
-      <h1>Checkout</h1>
+      <div
+        style={{
+          width: "500px",
+          padding: "30px",
+          backgroundColor: "#081229",
+          borderRadius: "15px",
+          boxShadow: "0 0 20px rgba(0,0,0,0.5)"
+        }}
+      >
 
-      <h2>Total: ₹ {totalPrice}</h2>
+        <h1
+          style={{
+            textAlign: "center",
+            marginBottom: "20px"
+          }}
+        >
+          Checkout
+        </h1>
 
-      <textarea
-        placeholder="Enter Shipping Address"
-        value={address}
-        onChange={(e) =>
-          setAddress(e.target.value)
-        }
-      />
+        <h2
+          style={{
+            textAlign: "center",
+            marginBottom: "20px"
+          }}
+        >
+          Total: ₹ {totalPrice}
+        </h2>
 
-      <br /><br />
+        <textarea
+          placeholder="Enter Shipping Address"
+          value={address}
+          onChange={(e) =>
+            setAddress(e.target.value)
+          }
+          style={{
+            width: "100%",
+            height: "120px",
+            padding: "12px",
+            borderRadius: "8px",
+            marginBottom: "20px",
+            backgroundColor: "#1e293b",
+            color: "white",
+            border: "1px solid #475569",
+            resize: "none"
+          }}
+        />
 
-      <button onClick={placeOrder}>
-        Place Order
-      </button>
+        <button
+          onClick={placeOrder}
+          style={{
+            width: "100%",
+            padding: "12px",
+            fontSize: "18px",
+            backgroundColor: "#2563eb",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer"
+          }}
+        >
+          Place Order
+        </button>
+
+      </div>
 
     </div>
 
   );
-
 }
-
 export default Checkout;

@@ -26,82 +26,82 @@ function App() {
 
   return (
 
-  <BrowserRouter>
+    <BrowserRouter>
 
-    <div
-      style={{
+      <div
+        style={{
 
-        minHeight: "100vh",
+          minHeight: "100vh",
 
-        display: "flex",
+          display: "flex",
 
-        flexDirection: "column"
+          flexDirection: "column"
 
-      }}
-    >
+        }}
+      >
 
-      <Navbar />
+        <Navbar />
 
-      <div style={{ flex: 1 }}>
+        <div style={{ flex: 1 }}>
 
-        <Routes>
+          <Routes>
 
-          <Route
-            path="/"
-            element={<Home />}
-          />
+            <Route
+              path="/"
+              element={<Home />}
+            />
 
-          <Route
-            path="/login"
-            element={<Login />}
-          />
+            <Route
+              path="/login"
+              element={<Login />}
+            />
 
-          <Route
-            path="/register"
-            element={<Register />}
-          />
+            <Route
+              path="/register"
+              element={<Register />}
+            />
 
-          <Route
-            path="/dashboard"
-            element={<Dashboard />}
-          />
+            <Route
+              path="/dashboard"
+              element={<Dashboard />}
+            />
 
-          <Route
-            path="/product/:id"
-            element={<ProductDetails />}
-          />
+            <Route
+              path="/product/:id"
+              element={<ProductDetails />}
+            />
 
-          <Route
-            path="/cart"
-            element={<Cart />}
-          />
+            <Route
+              path="/cart"
+              element={<Cart />}
+            />
 
-          <Route
-            path="/payment"
-            element={<Payment />}
-          />
+            <Route
+              path="/payment"
+              element={<Payment />}
+            />
 
-          <Route
-            path="/checkout"
-            element={<Checkout />}
-          />
+            <Route
+              path="/checkout"
+              element={<Checkout />}
+            />
 
-          <Route
-            path="/my-orders"
-            element={<MyOrders />}
-          />
+            <Route
+              path="/my-orders"
+              element={<MyOrders />}
+            />
 
-        </Routes>
+          </Routes>
+
+        </div>
+
+        <Footer />
 
       </div>
 
-      <Footer />
+    </BrowserRouter>
 
-    </div>
-
-  </BrowserRouter>
-
-);
+  );
 }
 
 export default App;

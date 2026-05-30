@@ -27,7 +27,7 @@ function ProductDetails() {
     try {
 
       const response = await axios.get(
-        `https://artisans-corner-api.onrender.com/api/products/${id}`
+        `https://artisanscorner.onrender.com/api/products/${id}`
       );
 
       setProduct(response.data.product);
@@ -45,7 +45,7 @@ function ProductDetails() {
     try {
 
       const response = await axios.get(
-        `https://artisans-corner-api.onrender.com/api/reviews/${id}`
+        `https://artisanscorner.onrender.com/api/reviews/${id}`
       );
 
       setReviews(response.data.reviews);
@@ -66,7 +66,7 @@ function ProductDetails() {
         localStorage.getItem("token");
 
       await axios.post(
-        "https://artisans-corner-api.onrender.com/api/reviews",
+        "https://artisanscorner.onrender.com/api/reviews",
         {
           productId: id,
           rating,
@@ -107,16 +107,16 @@ function ProductDetails() {
 
   const averageRating =
     reviews.length > 0
-    ?
-    (
-      reviews.reduce(
-        (sum, review) =>
-          sum + review.rating,
-        0
-      ) / reviews.length
-    ).toFixed(1)
-    :
-    0;
+      ?
+      (
+        reviews.reduce(
+          (sum, review) =>
+            sum + review.rating,
+          0
+        ) / reviews.length
+      ).toFixed(1)
+      :
+      0;
 
   return (
 
@@ -190,32 +190,32 @@ function ProductDetails() {
 
       {
         reviews.length === 0
-        ?
-        <p>No Reviews Yet</p>
-        :
-        reviews.map((review) => (
+          ?
+          <p>No Reviews Yet</p>
+          :
+          reviews.map((review) => (
 
-          <div
-            key={review._id}
-            style={{
-              border: "1px solid gray",
-              padding: "10px",
-              marginBottom: "10px"
-            }}
-          >
+            <div
+              key={review._id}
+              style={{
+                border: "1px solid gray",
+                padding: "10px",
+                marginBottom: "10px"
+              }}
+            >
 
-            <h4>
-              Rating:
-              {" "}
-              {review.rating}
-              ⭐
-            </h4>
+              <h4>
+                Rating:
+                {" "}
+                {review.rating}
+                ⭐
+              </h4>
 
-            <p>{review.comment}</p>
+              <p>{review.comment}</p>
 
-          </div>
+            </div>
 
-        ))
+          ))
       }
 
     </div>
