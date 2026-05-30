@@ -5,33 +5,23 @@ function Footer() {
     <footer
       style={{
 
-        marginTop: "50px",
+        backgroundColor: "black",
+
+        color: "white",
 
         padding: "20px",
 
         textAlign: "center",
 
-        backgroundColor: "#081229",
-
-        color: "white",
-
-        borderTop: "1px solid #1e293b"
+        marginTop: "40px"
 
       }}
     >
 
       <h3>Artisan's Corner</h3>
 
-      <br />
-
       <p>
-        Discover Handmade Treasures
-      </p>
-
-      <br />
-
-      <p>
-        © 2026 Artisan's Corner | Developed by Sujal Pawar
+        Handmade Marketplace Platform
       </p>
 
     </footer>
